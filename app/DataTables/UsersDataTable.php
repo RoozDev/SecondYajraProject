@@ -51,7 +51,16 @@ class UsersDataTable extends DataTable
                 Button::make('print'),
                 Button::make('reset'),
                 Button::make('reload'),
-            ]);
+            ])
+            ->parameters([
+                'language' => [
+                    'url' => '//cdn.datatables.net/plug-ins/1.13.6/i18n/fa.json',
+                ],
+                'columns' => [
+
+        // Add more columns as needed
+    ],
+                ]);
     }
 
     /**
@@ -60,11 +69,9 @@ class UsersDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id'),
-            Column::make('name'),
-            Column::make('email'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            Column::make('id')->title('شماره')->addClass('text-center'),
+            Column::make('name')->title('نام')->addClass('text-center'),
+            Column::make('email')->title('ایمیل')->addClass('text-center'),
         ];
     }
 

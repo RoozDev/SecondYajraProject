@@ -23,7 +23,7 @@ return [
         'case_insensitive' => true,
 
         /*
-         * Wild card will add "%" in between every characters of the keyword.
+         * Wild card will add "%" in between every character of the keyword.
          * SQL: column LIKE "%k%e%y%w%o%r%d%"
          */
         'use_wildcards'    => false,
