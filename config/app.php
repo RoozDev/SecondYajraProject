@@ -159,7 +159,11 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\Snappy\ServiceProvider::class,
+        Yajra\DataTables\ExportServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -183,6 +187,9 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
     ])->toArray(),
 
 ];

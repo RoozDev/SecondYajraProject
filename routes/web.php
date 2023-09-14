@@ -24,4 +24,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::controller(UsersController::class)->group(function (){
     Route::get('/users', 'index')->name('users.index');
+    Route::get('/generate-pdf', 'UsersController@userPdf')->name('generate.pdf');
+
 });

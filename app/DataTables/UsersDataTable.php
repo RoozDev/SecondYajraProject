@@ -40,6 +40,10 @@ class UsersDataTable extends DataTable
         return $this->builder()
             ->setTableId('users-table')
             ->columns($this->getColumns())
+            ->parameters(
+                [
+                 'excel']
+            )
             ->minifiedAjax()
             ->orderBy(1)
             ->selectStyleSingle()
@@ -47,7 +51,6 @@ class UsersDataTable extends DataTable
                 Button::make('add'),
                 Button::make('excel'),
                 Button::make('csv'),
-                Button::make('pdf'),
                 Button::make('print'),
                 Button::make('reset'),
                 Button::make('reload'),
@@ -82,4 +85,5 @@ class UsersDataTable extends DataTable
     {
         return 'Users_'.date('YmdHis');
     }
+
 }
